@@ -587,4 +587,6 @@ public class Settings extends SettingsActivity {
 
     /** Evolution X additions */
     public static class PrivateDnsSettingsActivity extends SettingsActivity { /* empty */ }
+
+    public static class SmartPixelsActivity extends SettingsActivity {}
 }
