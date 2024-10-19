@@ -286,7 +286,7 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
         @Override
         public void onSampleStarting(IncreasingRingVolumePreference pref) {
             mPlayingPref = pref;
-            mVolumeCallback.stopSample();
+            mVolumeSliderCallback.stopSample();
             mHandler.removeMessages(STOP_SAMPLE);
             mHandler.sendEmptyMessageDelayed(STOP_SAMPLE, SAMPLE_CUTOFF);
         }
