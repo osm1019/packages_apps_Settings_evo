@@ -25,13 +25,6 @@
         settings:searchable="false"
         android:title="@string/notification_bundle_description"/>
 
-    <com.android.settingslib.widget.IllustrationPreference
-        android:key="illustration"
-        settings:searchable="false"
-        android:selectable="false"
-        app:lottie_cacheComposition="false"
-        settings:dynamicColor="true"/>
-
     <PreferenceCategory
         android:key="enabled_settings">
 
