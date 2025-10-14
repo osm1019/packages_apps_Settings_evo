@@ -29,6 +29,16 @@
         android:summary="@string/evolver_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_evolver"
         settings:controller="org.evolution.settings.TopLevelEvolutionSettingsPreferenceController"/>
+        
+  <com.android.settings.widget.HomepagePreference
+            android:key="top_level_device_settings"
+            android:order="-155"
+            android:icon="@drawable/ic_homepage_device"
+            android:title="OnePlus Settings"
+            android:summary="Extra settings for OnePlus 13">
+            <intent android:action="android.settings.DEVICE_SETTINGS"
+                    android:targetPackage="org.lineageos.device.settings"/>
+        </com.android.settings.widget.HomepagePreference>
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
