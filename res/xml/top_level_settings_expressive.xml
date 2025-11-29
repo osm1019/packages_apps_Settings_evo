@@ -74,6 +74,16 @@
             android:summary="@string/app_and_notification_dashboard_summary"
             settings:highlightableMenuKey="@string/menu_key_apps"/>
 
+       <com.android.settings.widget.HomepagePreference
+            android:key="top_level_device_settings"
+            android:order="20"
+            android:icon="@drawable/ic_homepage_device"
+            android:title="OnePlus Settings"
+            android:summary="Extra settings for OnePlus 13">
+            <intent android:action="android.settings.DEVICE_SETTINGS"
+                    android:targetPackage="org.lineageos.device.settings"/>
+        </com.android.settings.widget.HomepagePreference>
+
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
             android:icon="@drawable/ic_homepage_notification"
