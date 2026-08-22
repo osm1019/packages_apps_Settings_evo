@@ -64,8 +64,17 @@ public class MinRefreshRatePreferenceController extends BasePreferenceController
         final List<String> entries = new ArrayList<>();
         final List<String> values = new ArrayList<>();
 
+        // LTPO floor: 1 Hz is below the lowest discrete SF mode (60/90/120) and
+        // lets the panel self-refresh through the full adaptive range.
+        entries.add(mContext.getString(R.string.min_refresh_rate_auto));
+        values.add("1");
+
         for (int i = 0; i < mSupportedList.size(); ++i) {
-            final String refreshRate = String.valueOf(mSupportedList.get(i));
+            final int rate = mSupportedList.get(i);
+            if (rate <= 1) {
+                continue;
+            }
+            final String refreshRate = String.valueOf(rate);
             entries.add(refreshRate + " Hz");
             values.add(refreshRate);
         }

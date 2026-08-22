@@ -88,6 +88,8 @@ public class ScreenRefreshRateController extends BasePreferenceController implem
         if (extremeMode && supportedList.size() > 0) {
             final int maxAllowed = supportedList.get(supportedList.size() - 1);
             summary = String.valueOf(maxAllowed) + " Hz";
+        } else if (minRefreshRate <= 1) {
+            summary = "1 ~ " + String.valueOf(maxRefreshRate) + " Hz";
         } else if (minRefreshRate == maxRefreshRate) {
             summary = String.valueOf(maxRefreshRate) + " Hz";
         } else {
